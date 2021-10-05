@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style2.css') }}">
+    <title>Spare Partz</title>
+</head>
+<body>
+    <div class="nav">
+        <h1 class="logo">SparePartz</h1>
+
+        <div class="icons">
+            <a href="#">Favourites</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+            <a href="#">Premium</a>
+            <a href="#">My Ads</a>
+        </div>  
+
+        <button class="btn">Sell</button>
+    </div>
+
+    <div class="header">
+        <img class="header-img" src="{{ url_for('static',filename='images/header1.png') }}">
+
+
+         
+        <h1>Create Advert</h1>
+        <form class="search-form" method="post" action="" enctype="multipart/form-data">
+        <div >
+            <div id="title"> <em>Title</em>
+                <input type="text" name="title">
+            </div>
+            <br>
+            <br>
+	
+            <div>
+                <select id="search" name="type">
+                <option value="" class="selected">Select Category</option>
+                <option value="audio">Audio Parts</option>
+                <option value="brakes">Brakes Suspension and Steering</option>
+                <option value="engine">Engine and Drivetrain</option>
+                <option value="exterior">Exterior Accesories</option>
+                <option value="headlights">Headlights and Lighting</option>
+                <option value="interior">Interior Accesories</option>
+                <option value="motorcycle">Motorcycle Parts</option>
+                <option value="safety">Safety and Security</option>
+                <option value="wheels">Wheels and Parts</option>
+            </select>
+            </div>
+        
+            <div id="audio"> <em>Select Sub-Category</em>
+                <select name="subtype1">
+              <option value="amplifiers">Amplifiers</option>
+              <option value="audio accesories">Audio Accesories</option>
+              <option value="backboards">BackBoards</option>
+              <option value="cd players">CD Players</option>
+              <option value="component split systems">Component Split Systems</option>
+              <option value="crossovers">Crossovers</option>
+              <option value="dvd systems and screens">DVD Systems and Screens</option>
+              <option value="equalizers">Equalizers</option>
+              <option value="fascia trim plates">Fascia Trim Plates</option>
+              <option value="media players">Media Players</option>
+              <option value="sound deadening and sealing">Sound Deadening and Sealing</option>
+              <option value="speakers">Speakers</option>
+              <option value="subwofers and enclosures">Subwofers and Enclosures</option>
+              <option value="tweeters">Tweeters</option>
+              <option value="wiring kits and cabling">Wiring Kits and Cabling</option>
+              <option value="other">Other</option>
+            </select>
+            </div>
+        
+            <div id="brakes"> <em>Select Sub-Category</em>
+                <select name="subtype2">
+              <option value="brake discs, pads and calipers">Brake Discs, Pads and Calipers</option>
+              <option value="control arms, thurst and components">Control Arms, Thurst Arms and Components</option>
+              <option value="shocks struts and components">Shocks Struts and Components</option>
+              <option value="steering systems and components">Steering Systems and Components</option>
+              <option value="tie rods, steering racks, gearboxes and components">Tie Rods, Steering Racks, Gearboxes & Components</option>
+              <option value="air suspension and components">Air Suspension Components</option>
+              <option value="ball joints and components">Ball Joints and Components</option>
+              <option value="brake drums, shoes and components">Brake Drums, Shoes and Components</option>
+              <option value="brake hoses, lines and components">Brake Hoses, Lines and Components</option>
+              <option value="brake master cylinders, boosters and components">Brake Master Cylinders, Boosters and Components</option>
+              <option value="coil springs and components">Coil Springs and Components</option>
+              <option value="lowering, leveling and lifting kits">Lowering, Leveling and Lifting Kits</option>
+              <option value="lug nuts and bolts">Lug Nuts and Blots</option>
+              <option value="OE replica wheels">OE Replica Wheels</option>
+              <option value="parking brakes, ABS and Components">Parking Brakes, ABS and Components</option>
+              <option value="power steering pumps and components">Power Steering Pumps and Components</option>
+              <option value="speed sensors">Speed Sensors</option>
+              <option value="suspension links rods, bars and components">Suspension Links Rods, Bars and Components</option>
+              <option value="suspension system components">Suspension System Components</option>
+              <option value="sway bars and components">Sway Bars and Components</option>
+              <option value="tire pressure monitoring systems and components">Tire Pressure Monitoring Systems and Components</option>
+              <option value="wheel covers caps and simulators">Wheel Covers Caps and Simulators</option>
+              <option value="other">Other</option>
+            </select>
+            </div>
+
+            <div id="engine"> <em>Select Sub-Category</em>
+                <select name="subtype3">
+              <option value="air filters and intake systems">Air Filters and Intake Systems</option>
+              <option value="engine and transmission assemblies">Engine and Transmission Assemblies</option>
+              <option value="engine and transmission mounts">Engine and Transmission Mounts</option>
+              <option value="starters, batteries and components">Starters, batteries and Components</option>
+              <option value="axels and drive shafts">Axels and Drive shafts</option>
+              <option value="cams, timing and valvetrain">Cams, Timing and Valvetrain</option>
+              <option value="catalytic converters and components">Catalytic Converters and Components</option>
+              <option value="clutches, flywheels and components">Clutches, Flywheels and Components</option>
+              <option value="complete engines">Complete Engines</option>
+              <option value="control modules, ignition and distributors">Control Modules, Ignition and Distributors</option>
+              <option value="cranks, pistons and components">Cranks, Pistons and Components</option>
+              <option value="emission and components">Emission and Components</option>
+              <option value="exhaust, headers and components">Exhaust, Headers and Components</option>
+              <option value="fuel systems and components">Fuel Systems and Components</option>
+              <option value="oxygen sensors and components">Oxygen Sensors and Components</option>
+              <option value="radiators fans and components">Radiators Fans and Components</option>
+              <option value="spark plugs, wires and components">Spark Plugs Wires and Components</option>
+              <option value="transmissions and shifters">Transmissions and Shifters</option>
+              <option value="tuners, chips and monitors">Tuners, Chips and Monitors</option>
+              <option value="turbos and components">Turbos and Components</option>
+              <option value="wheel hubs, bearings and components">Wheel Hubs, Bearings and Components</option>
+              <option value="other">Other</option>
+            </select>
+            </div>
+
+            <div id="exterior"> <em>Select Sub-Category</em>
+                <select name="subtype4">
+              <option value="air dams">Air Dams</option>
+              <option value="engine and transmissiona assemblies">Engine and Transmission Assemblies</option>
+              <option value="antenas">Antenas</option>
+              <option value="bumpers and parts">Bumpers and Parts</option>
+              <option value="car covers">Car Covers</option>
+              <option value="door handles">Door Handles</option>
+              <option value="fenders">Fenders</option>
+              <option value="grilles">Grilles</option>
+              <option value="hoods">Hoods</option>
+              <option value="mirrors">Mirrors</option>
+              <option value="mouldings">Mouldings</option>
+              <option value="nerf bars">Nerf Bars</option>
+              <option value="racks">Racks</option>
+              <option value="shields and deflectors">Shields and Deflectors</option>
+              <option value="sppoilers">Spoilers</option>
+              <option value="others">Other</option>
+            </select>
+            </div>
+
+            <div id="headlights"> <em>Select Sub-Category</em>
+                <select name="subtype5">
+              <option value="bulbs">Bulbs</option>
+              <option value="cover lights and components">Corner Lights and Components</option>
+              <option value="fog lights, driving lights, components and accesories">Fog Lights, Driving Lights, Components and Accesories</option>
+              <option value="headlights, components and accesories">Headlights, Components and Accesories</option>
+              <option value="interior lighting and components">Interior Lighting and Components</option>
+              <option value="off-road lighting">Off-Road Lighting</option>
+              <option value="switches, relays, wiring and components">Switches, Relays, Wiring and Components</option>
+              <option value="tail lights, backup lights and accesories">Tail Lights, Backup Lights and Accesories</option>
+              <option value="third brake lights and components">Third Brake Lights and Components</option>
+              <option value="turn signals, side markers and other lights">Turn Signals, Side Markers and other Lights</option>
+              <option value="other">Other</option>
+            </select>
+            </div>
+
+            <div id="interior"> <em>Select Sub-Category</em>
+                <select name="subtype6">
+              <option value="consoles">Consoles</option>
+              <option value="cup holders">Cup Holders</option>
+              <option value="door handles">Door Handles</option>
+              <option value="door panel">Door Panel</option>
+              <option value="floor mats">Floor Mats</option>
+              <option value="glove boxes">Glove Boxes</option>
+              <option value="mirrors">Mirrors</option>
+              <option value="pedals and pads">Pedals and Pads</option>
+              <option value="seat covers">Seat Covers</option>
+              <option value="seats">Seats</option>
+              <option value="shift knobs">Shift Knobs</option>
+              <option value="steering wheels">Steering Wheels</option>
+              <option value="sun visors">Sun Visors</option>
+              <option value="switches and controls">Switches and Controls</option>
+              <option value="trim">Trim</option>
+              <option value="window cranks">Window Cranks</option>
+              <option value="window motors and parts">Window Motors and Parts</option>
+              <option value="others">Others</option>
+            </select>
+            </div>
+
+            <div id="motorcycle"> <em>Select Sub-Category</em>
+                <select name="subtype7">
+              <option value="air cleaners">Air Cleaners</option>
+              <option value="batteries and elecrical">Batteries and Electrical</option>
+              <option value="brakes">Brakes</option>
+              <option value="controls">Controls</option>
+              <option value="dash and gauges">Dash and Gauges</option>
+              <option value="drive and transmission">Drive and Transmission</option>
+              <option value="engine and components">Engine and Components</option>
+              <option value="exhaust and parts">Exhaust and Parts</option>
+              <option value="lighting">Lighting</option>
+              <option value="mirrors and accesories">Mirrors and Accesories</option>
+              <option value="protection parts">Protection Parts</option>
+              <option value="seats">Seats</option>
+              <option value="suspension">Suspension</option>
+              <option value="wind screens">Wind Screens</option>
+              <option value="others">Others</option>
+            </select>
+            </div>
+
+            <div id="safety"> <em>Select Sub-Category</em>
+                <select name="subtype8">
+              <option value="airbags">Airbags</option>
+              <option value="fire extinguishers">Fire Extinguishers</option>
+              <option value="seat belts and parts">Seat Belts and Parts</option>
+              <option value="steering wheel and locks">Steering Wheel and Locks</option>
+              <option value="wheel clamps">Wheel Clamps</option>
+              <option value="others">Others</option>
+            </select>
+            </div>
+
+            <div id="wheels"> <em>Select Sub-Category</em>
+                <select name="subtype9">
+              <option value="rims">Rims</option>
+              <option value="spare tire and accesories">Spare Tire and Accesories</option>
+              <option value="tire and wheel care">Tire and Wheel Care</option>
+              <option value="tires">Tiers</option>
+              <option value="wheel covers and simulators">Wheel Covers and Simulators</option>
+              <option value="wheels">Wheels</option>
+            </select>
+            </div>
+            <br>
+            <br>
+
+            <div id="location"> <em>Location</em>
+                <input list="brow" name="location" placeholder="Select Location">
+                <datalist id="brow">
+                   <option value="Mombasa">
+                   <option value="Kwale">
+                   <option value="Kilifi">
+                   <option value="Tana River">
+                   <option value="Lamu">
+                   <option value="Taita-Taveta">
+                   <option value="Garissa">
+                    <option value="Wajir">
+                    <option value="Mandera">
+                    <option value="Marsabit">
+                    <option value="Isiolo">
+                    <option value="Meru">
+                    <option value="Tharaka-Nithi">
+                    <option value="Embu">
+                    <option value="Kitui">
+                    <option value="Machakos">
+                    <option value="Makueni">
+                    <option value="Nyandarua">
+                    <option value="Nyeri">
+                    <option value="Kirinyaga">
+                    <option value="Muranga">
+                    <option value="Kiambu">
+                    <option value="Turkana">
+                    <option value="West-Pokot">
+                    <option value="Samburu">
+                    <option value="Trans-Nzoia">
+                    <option value="Uasin-Gishu">
+                    <option value="Elgeyo-Marakwet">
+                    <option value="Nandi">
+                    <option value="Baringo">
+                    <option value="Laikipia">
+                    <option value="Nakuru">
+                    <option value="Narok">
+                    <option value="Kajiado">
+                    <option value="Kericho">
+                    <option value="Bomet">
+                    <option value="Kakamega">
+                    <option value="Vihiga">
+                    <option value="Bungoma">
+                    <option value="Busia">
+                    <option value="Siaya">
+                    <option value="Kisumu">
+                    <option value="Homa Bay">
+                    <option value="Migori">
+                    <option value="Kisii">
+                    <option value="Nyamira">
+                    <option value="Nairobi">   
+                </datalist>  
+            </div>
+            <br>
+            <br>
+            <div id="condition"> <em>Condition</em>
+                <select name="condition">
+                    <option value="brand new">Brand New</option>
+                    <option value="used">Used</option>
+                </select>
+            </div>
+
+            <br>
+            <br>
+             
+            <em>Description</em>
+            <br>
+            <br>
+            <div id="description"> 
+                <textarea class="desc" name="description"></textarea>
+            </div>
+
+            <br>
+            <br>
+
+            <div id="phtos"> <em>Photos</em>
+                <input type="file" name="file" placeholder="KES" multiple> (upload 6+ photos)
+            </div>
+
+            <br>
+            <br>
+
+            <div id="price"> <em>Price</em>
+                <input type="number" name="price" placeholder="KES">
+            </div>
+
+            <br>
+            <br>
+
+            <div id="phone"> <em>Phone</em>
+                <input type="tel" name="tel" disabled>
+            </div>
+
+            <br>
+            <br>
+
+            <div id="store"> <em>Store</em>
+                <input type="text" name="name" disabled value="{{name}}">
+            </div>
+
+            <br>
+            <br>
+
+            <div id="status"> <em>Status</em>
+                <input type="text" name="status" disabled value="review">
+            </div>
+
+            <br>
+            <br>
+
+            <div style="margin-left: 9%;" id="subimt">
+                <input type="submit"  value="Post Advert">
+            </div>
+        
+        </div>
+        </form>
+    
+    </div>
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script  src="{{ url_for('static',filename='main.js') }}"></script>
+</body>
+</html>

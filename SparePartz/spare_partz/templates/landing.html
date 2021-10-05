@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <title>Spare Partz</title>
+</head>
+<body>
+    <div class="nav">
+        <h1 class="logo">SparePartz</h1>
+
+        <div class="icons">
+            <a href="#">Favourites</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+            <a href="#">Premium</a>
+            <a href="#">My Ads</a>
+        </div>  
+
+        <a href="{{ url_for('main.sell') }}"> <button class="btn">Sell</button></a>
+    </div>
+
+    <div class="header">
+        <img class="header-img" src="{{ url_for('static',filename='images/header1.png') }}">
+
+        <h1 class="header-title">Sell Vehicle Spare Parts! <br>
+             No extra charge,<br>
+             Wide area and <br>
+             Large Customer Base</h1>
+             
+            
+    </div>
+
+    <div class="sidebar">
+        <div class="vehicle">
+         <h1>Audio</h1>
+         <h4>105,698 Posts</h4>
+        </div>
+        <div class="vehicle">
+            <h1>Brakes</h1>
+            <h4>110057 Posts</h4>
+        </div>
+        <div class="vehicle">
+           <h1>Engine</h1>
+           <h4>10,874 Posts</h4>
+        </div>
+        <div class="vehicle">
+            <h1>Exterior</h1>
+            <h4>105,000 Posts</h4>
+        </div>
+        <div class="vehicle">
+            <h1>Headlights</h1>
+            <h4>87,965 Posts</h4>
+        </div>
+
+         <div class="vehicle">
+            <h1>Interior</h1>
+            <h4>87,965 Posts</h4>
+        </div>
+         <div class="vehicle">
+            <h1>Motorcycle</h1>
+            <h4>87,965 Posts</h4>
+        </div>
+         <div class="vehicle">
+            <h1>Safety</h1>
+            <h4>87,965 Posts</h4>
+        </div>
+        <div class="vehicle">
+            <h1>Wheels</h1>
+            <h4>87,965 Posts</h4>
+        </div>
+    </div>
+
+    <div class="classifides">
+        <div class="ad">
+         <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+         <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+             <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+             <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+             <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+            <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+           <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+          <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+           <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+        <div class="ad">
+           <img class="ad-img" src="{{ url_for('static',filename='images/vehicle.png') }}">
+            <h6>Car Model</h6>
+         <h6>Name of Spare</h6>
+         <h6>Price</h6>
+         <h6>Location</h6>
+         <h6>Seller</h6>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        <ul class="about">
+            <li class="ab-header">About Us</li>
+            <li>About SparePartz</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Billing Policy</li>
+        </ul>
+
+        <ul class="support">
+            <li class="ab-header">support</li>
+            <li>Safety Tips</li>
+            <li>Contact Us</li>
+            <li>FAQ</li>
+            
+        </ul>
+
+        <ul class="resources">
+            <li class="ab-header">Our Resources</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+            <li>Twitter</li> 
+        </ul>
+
+        <ul class="links">
+            <li class="ab-header">Hot Links</li>
+            <li>Brands</li>
+            <li>Sellers</li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+    
+
+
+
+   
+</body>
+</html>
