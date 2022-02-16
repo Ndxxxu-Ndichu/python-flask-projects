@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   div { padding:10px;} 
+</style>
+<body>
+    <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
+
+       <div id="room_fileds">
+           <div>
+            <div class='label'>Room 1:</div>
+            <div class="content">
+                <span>Width: <input type="text" style="width:48px;" name="width[]" value="" /><small>(ft)</small> X </span>
+                <span>Length: <input type="text" style="width:48px;" namae="length[]" value="" /><small>(ft)</small></span>
+            </div>
+           </div>
+        </div>
+</body>
+<script>
+    var room = 1;
+function add_fields() {
+    room++;
+    var objTo = document.getElementById('room_fileds')
+    var divtest = document.createElement("div");
+    divtest.innerHTML = '<div class="label">Room ' + room +':</div><div class="content"><span>Width: <input type="text" style="width:48px;" name="width[]" value="" /><small>(ft)</small> X</span><span>Length: <input type="text" style="width:48px;" namae="length[]" value="" /><small>(ft)</small></span></div>';
+    
+    objTo.appendChild(divtest)
+}
+</script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+     - Roxy: Bootstrap template by GettTemplates.com
+     - https://gettemplates.co/roxy
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EaseInvoice By ButterFly Infusion</title>
+    <meta name="description" content="Roxy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/bootstrap.min.css') }}">
+
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/owlcarousel/owl.carousel.min.css') }}">
+
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/lightcase/lightcase.css') }}">
+
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.min.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-white" href="/">
+            <h3 class="font-weight-bolder mb-0">EaseInvoice</h3>
+        </a>
+       
+        
+    </div>
+</nav>
+
+
+
+	
+</div>	<div class="jumbotron d-flex align-items-center">
+  <div class="container text-center">
+      {% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}
+    </div>
+{% endif %}
+{% endwith %}
+      <h4>Reset Password</h4>
+    <form method="post" name="contact-us" action="/forgotPass">
+        <div class="row">
+           
+            
+           
+            <div class="col-md-12 form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="email">
+            </div>
+             <div class="col-md-12 form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="password">
+            </div>
+           
+            <div class="text-center">
+                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Recieve Reset Link</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+    
+  </div>
+  <div class="rectangle-1"></div>
+  <div class="rectangle-2"></div>
+  <div class="rectangle-transparent-1"></div>
+  <div class="rectangle-transparent-2"></div>
+  <div class="circle-1"></div>
+  <div class="circle-2"></div>
+  <div class="circle-3"></div>
+  <div class="triangle triangle-1">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-2">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-3">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-4">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+</div>	<!-- Features Section-->
+
+<!-- End of Features Section--></div>
+<footer class="mastfoot my-3">
+    <div class="inner container">
+         <div class="row">
+         	<div class="col-lg-4 col-md-12 d-flex align-items-center">
+         		
+         	</div>
+         	<div class="col-lg-4 col-md-12 d-flex align-items-center">
+         		<p class="mx-auto text-center mb-0">&copy; 2019 Roxy. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates</a>.</p>
+         	</div>
+           
+            <div class="col-lg-4 col-md-12">
+            	<nav class="nav nav-mastfoot justify-content-center">
+	                <a class="nav-link" href="#">
+	                	<i class="fab fa-facebook-f"></i>
+	                </a>
+	                <a class="nav-link" href="#">
+	                	<i class="fab fa-twitter"></i>
+	                </a>
+	                <a class="nav-link" href="#">
+	                	<i class="fab fa-instagram"></i>
+	                </a>
+	                <a class="nav-link" href="#">
+	                	<i class="fab fa-linkedin"></i>
+	                </a>
+	                <a class="nav-link" href="#">
+	                	<i class="fab fa-youtube"></i>
+	                </a>
+	            </nav>
+            </div>
+            
+        </div>
+    </div>
+</footer>	<!-- External JS -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+
+
+    <script src= "{{ url_for('static',filename='vendor/bootstrap/popper.min.js') }}"></script>
+
+
+    <script src= "{{ url_for('static',filename='vendor/bootstrap/bootstrap.min.js') }}"></script>
+
+
+
+    <script src= "{{ url_for('static',filename='vendor/select2/select2.min.js ') }}"></script>
+
+
+
+    <script src= "{{ url_for('static',filename='vendor/owlcarousel/owl.carousel.min.js') }}"></script>
+
+
+    <script src= "{{ url_for('static',filename='vendor/stellar/jquery.stellar.js') }}"></script>
+
+
+    <script src= "{{ url_for('static',filename='vendor/isotope/isotope.min.js') }}"></script>
+
+
+
+    <script src= "{{ url_for('static',filename='vendor/lightcase/lightcase.js') }}"></script>
+
+
+
+    <script src= "{{ url_for('static',filename='vendor/waypoints/waypoint.min.js') }}"></script>
+
+
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/app.min.js "></script>
+    <script src= "{{ url_for('static',filename='js/app.min.js ') }}"></script>
+
+	<script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>
