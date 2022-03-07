@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>EaseInvoice - Create Invoice</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+
+
+    <link href="{{url_for('static', filename='css/fontawesome-all.css')}}" rel="stylesheet">
+
+
+    <link href="{{url_for('static', filename='css/swiper.css')}}" rel="stylesheet">
+
+
+    <link href="{{url_for('static', filename='css/magnific-popup.css')}}" rel="stylesheet">
+
+
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <h2 class="navbar-brand logo-image" href="index.html">EaseInvoice</h2> 
+            
+            
+
+           
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Create Invoice</h1>
+                   <br> 
+                    <!-- Sign Up Form -->
+                    <div class="form-container">
+                        <form action="/invoices" method="post" data-toggle="validator" data-focus="false">
+                            <p style="color:grey;">Invoice Details</p>
+                            <div class="form-group">
+                                <input value="{{invo}}" name="invo" class="form-control-input" id="semail" readonly>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input value="{{name}}" name="user" class="form-control-input" id="sname" readonly>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input value="{{d}}" name="date" class="form-control-input"  readonly>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="due_date"  class="form-control-input"  required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            
+                            <p style="color:grey;">Client Details</p>
+                            <div class="form-group">
+                                <input type="text" name="client_name" class="form-control-input" id="client_name" required>
+                                <label class="label-control" for="client_name">Client Name</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="client_email" class="form-control-input" id="client_email" required>
+                                <label class="label-control" for="client_email">Client Email</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="client_phone" class="form-control-input" id="client_phone" required>
+                                <label class="label-control" for="client_phone">Client Phone</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                             
+                            <p style="color:grey;">Payment Instructions</p>
+                            <small>Bank Transfer</small>
+                            <div class="form-group">
+                                <input type="text" name="payment_bank" class="form-control-input" id="bank_name" required>
+                                <label class="label-control" for="bank_name">Bank Name</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="payment_acc" class="form-control-input" id="bank_acc" required>
+                                <label class="label-control" for="bank_acc">Bank A/C</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <small>Other Methods</small>
+                            <div class="form-group">
+                                <input type="text" name="payment_name" class="form-control-input" id="other_name" required>
+                                <label class="label-control" for="other_name">Mpesa, Paypal, Neteller etc</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="payment_method" class="form-control-input" id="other_id" required>
+                                <label class="label-control" for="other_id">Payment id (phone, email etc)</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                          
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">ADD ITEMS</button>
+                            </div>
+                            <div class="form-message">
+                                <div id="smsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
+                        </form>
+                    </div> <!-- end of form container -->
+                    <!-- end of sign up form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Scripts -->
+   <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> <!-- Bootstrap framework -->
+    <script src="{{url_for('static', filename='js/jquery.easing.min.js')}}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{{url_for('static', filename='js/swiper.min.js')}}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.js')}}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{{url_for('static', filename='js/validator.min.js')}}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script> <!-- Custom scripts -->
+</body>
+</html>
