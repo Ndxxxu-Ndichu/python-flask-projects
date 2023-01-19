@@ -1,0 +1,21 @@
+from pymongo import MongoClient
+
+client = MongoClient()
+
+
+if location == 'kilimani':
+     for file in files:
+      file_names.append(file.filename)
+      try:
+       db = client.naibnb
+       collection = db.images_path
+       data = {'manager' : manager, 'property_id' : property_id, 'location':location, 'price':price, 'bedrooms':bedrooms, 'filenames': file_names}
+       collection.update_one({'property_id' : data['property_id']}, {"$set" : data}, upsert=True)
+      except:
+       return 'pass'
+     return redirect(url_for('main.add'))
+    else:
+        return 'pass' 
+
+
+this is a snippet a program to insert data into mongodb database and merge the duplicates. Hope you understand when you get back here
