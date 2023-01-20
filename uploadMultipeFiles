@@ -1,0 +1,23 @@
+if location == 'kilimani':
+      UPLOAD_FOLDER = f"uploads/{manager}/{location}/{property_id}"
+      os.makedirs(f'{UPLOAD_FOLDER}', exist_ok=True)
+      BUCKET = 'naibnb'
+      for file in files:
+        try:
+         file.save(os.path.join(UPLOAD_FOLDER, secure_filename(file.filename)))
+         upload_file(f'{UPLOAD_FOLDER}/{file.filename}', BUCKET)
+        except Exception as e:
+            return str(e)
+      for file in files: 
+       file_names.append(file.filename)
+      try:
+          db = client.naibnb
+          collection = db.kilimani
+          data = {'manager' : manager, 'mnger' : mnger,'property_id' : property_id, 'location':location, 'price':price, 'bedrooms':bedrooms, 'filenames': file_names, 'description' : description, 'link' : link}
+          collection.update_one({'property_id' : data['property_id']}, {"$set" : data}, upsert=True)
+          os.makedirs(f'{UPLOAD_FOLDER}', exist_ok=True)
+          BUCKET = 'naibnb'
+          
+      except:
+         return 'pass'
+    return redirect(url_for('main.dashboard'))
